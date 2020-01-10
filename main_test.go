@@ -9,7 +9,7 @@ func Test_fuelConsuption(t *testing.T) {
 		fuel       int
 		want       int
 	}{
-		{name: "How many kilometers is enough fuel", consuption: 20, fuel: 9, want: 44},
+		{name: "When consumption greater than existing amount", consuption: 20, fuel: 9, want: 44},
 	}
 	for _, testes := range test {
 		got := fuelConsuption(testes.consuption, testes.fuel)

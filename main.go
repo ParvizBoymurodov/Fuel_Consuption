@@ -8,7 +8,8 @@ func fuelConsuption(consuption, fuel int) int {
 	const fuelReserveForEmergency = 4
 
 	distance := distancePerKm * fuel / consuption
-	distance -= fuelReserveForEmergency * distance / distancePerKm
+	reserve := fuelReserveForEmergency * distance / distancePerKm
+	distance -= reserve
 	return distance
 
 }
